@@ -4,6 +4,7 @@ import Dashboard from "./components/Dashboard";
 import Settings from "./components/Settings";
 import Profile from "./components/Profile"
 
+
 const App = () => {
   return (
     <BrowserRouter>
