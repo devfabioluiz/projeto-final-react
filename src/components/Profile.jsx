@@ -1,7 +1,11 @@
 // Crie um arquivo chamado Profile.jsx
 const Profile = () => {
-  return  <h1>Perfil </h1>;
-}
+  const usuario = "Usuário";
+  return (
+    <>
+      <h1>Bem vindo, {usuario} </h1>;
+    </>
+  );
+};
 
 export default Profile;
-    

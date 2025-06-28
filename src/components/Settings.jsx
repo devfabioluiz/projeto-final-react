@@ -1,7 +1,7 @@
 // Crie um arquivo chamado Settings.jsx
 const Settings = () => {
-  return <h1>Configurações</h1>
-}
+  const usuario = "Usuário";
+  return <h1>Configurações de {usuario}</h1>;
+};
 
 export default Settings;
-    
