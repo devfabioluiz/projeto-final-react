@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { Button } from "@mui/material";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -8,7 +9,7 @@ const Dashboard = () => {
     <div>
       <h1>Meu dashboard</h1>
       <span>
-        <button onClick={() => navigate("/")}>Logout</button>
+      <Button variant="outlined" onClick={() => navigate("/")}>Logout</Button>
       </span>
       <ul>
         <li>

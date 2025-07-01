@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Dashboard from "./components/Dashboard";
-import Settings from "./components/Settings";
-import Profile from "./components/Profile";
-import Home from "./components/Home";
+import Dashboard from "./components/pages/Dashboard";
+import Settings from "./components/pages/Settings";
+import Profile from "./components/pages/Profile";
+import Home from "./components/pages/Home";
 import PrivateRoute from "./components/PrivateRoute";
 
 

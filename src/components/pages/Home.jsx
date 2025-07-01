@@ -1,10 +1,11 @@
+import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
   return (
     <>
-      <button onClick={() => navigate("/dashboard")}> Login</button>
+      <Button variant="contained" onClick={() => navigate("/dashboard")}>Login</Button>
     </>
   );
 };
