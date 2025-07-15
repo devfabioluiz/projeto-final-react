@@ -1,5 +1,7 @@
+import React, { useState, useEffect } from "react";
 import MultiActionAreaCard from "./MultiActionAreaCard";
 import './Promocoes.css'
+import axios from 'axios';
 
 const Promocoes = () => {
   const listaPromocoes = [
@@ -26,21 +28,25 @@ const Promocoes = () => {
     },
   ]
 
+  const [imagens, setImagens] = useState(null);
 
+  useEffect(() => {
+      axios.get('https://picsum.photos/v2/list')
+      .then((response) => setImagens(response.data))
+      .catch((error) => console.error('Error fetching data:', error));
+  }, []);
 
   return (
-    <div>
-        <ul>
-          {listaPromocoes.map((item, index) => (
-            <li key={index}>
-              <MultiActionAreaCard url={item.image} 
-              title={item.title}
-              text={item.text}
-              />
-            </li>
-          ))}
-        </ul>
-      </div>
+    <>
+        {imagens?.map((item, index) => (
+          <div key={index}>
+            <MultiActionAreaCard url={item.download_url} 
+            title={item.author}
+            text={item.author}
+            />
+          </div>
+        ))}
+      </>
     );
 };
 
