@@ -5,7 +5,11 @@ const Home = () => {
   const navigate = useNavigate();
   return (
     <>
-      <Button variant="contained" onClick={() => navigate("/dashboard")}>Login</Button>
+      <Button
+        variant="contained" onClick={
+          () => navigate("/dashboard")
+        }>Login
+      </Button>
     </>
   );
 };
